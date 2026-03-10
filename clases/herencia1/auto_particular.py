@@ -1,16 +1,25 @@
-from clases.herencia1.vehiculo import Vehiculo
-
-class AutoParticular(Vehiculo):
-
-    def __init__(self, matricula, modelo, potenciaCV, numeroPuertas):
-        super().__init__(matricula, modelo, potenciaCV)
-        self.numeroPuertas = numeroPuertas
-
+from clases.herencia2.persona import Persona
+class AutoParticular(Persona):
+    def __init__(self, clave, nombre, edad, marca, color, placa):
+        super().__init__(clave, nombre, edad)
+        
+        self.marca = marca
+        self.color = color
+        self.placa = placa
+        
     def __str__(self):
-        return super().__str__() + " " + str(self.numeroPuertas)
-
-    def abrirPuertas(self):
-        print("Abriendo puertas...")
-
-    def cerrarPuertas(self):
-        print("Cerrando puertas...")
+        return super().__str__()+""+self.marca+" "+self.color+" "+self.placa
+    
+    
+    def subirseAuto(self):
+        print("Subiendo al auto")
+        
+    def arrancarAuto(self):
+        print("Encendiendo la radio")
+        print("Arrancando el auto")
+    
+    def llegarDestino(self):
+        print("Llegando al destino")
+        
+    def bajandoAuto(self):
+        print("Bajando del auto")
